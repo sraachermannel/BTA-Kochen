@@ -1,0 +1,109 @@
+* {
+  /*Box Kalkulation von dem Rahmen aus für alle Elemente */
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+body {
+  margin: 0;
+}
+
+/*die Links in der Navigation
+
+- Großbuchstaben
+-schwarze Schrift
+- fette Schrift
+- nicht mehr unterstrichen
+*/
+
+.navi-links,
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 8px;
+  margin: 8px;
+  /*kleine Animation einfügen*/
+  transition: all 0.1s ease-in;
+}
+s .navlinks:hover,
+nav ul li a:hover {
+  color: white;
+  background-color: rgb(98, 64, 129);
+}
+
+/*die bullet points in der navigationsliste entfernen*/
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#navbutton {
+  background-color: transparent;
+  border: none;
+}
+
+header nav {
+  display: none;
+}
+
+/*einblenden der Navigation*/
+.show {
+  display: block;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 4rem;
+  align-items: center;
+}
+
+/*nun füge ich innerhalb der Main Box die Section mit Class-Name Hero ein*/
+.hero {
+  background-image: url(img/intro.jpg);
+  /*das hintergrundbild soll sich nicht mehrfach aneinanderreihen (das macht es automatisch)*/
+  background-repeat: none;
+  background-size: cover;
+  background-position: center;
+  min-height: 600px;
+  /*für extra große Bildschirme*/
+  margin: auto;
+  color: white;
+  text-align: center;
+}
+
+.button {
+  color: #374a67;
+  background-color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  /*16px sind das selbe wie 1rem*/
+  padding: 1rem;
+  border: 1px solid #374a67;
+  border-radius: 30px;
+}
+
+/**ab hier immer die Anweisungen für das größere Bild*/
+@media (min-width: 1140px) {
+  header nav {
+    display: block;
+  }
+
+  #navbutton {
+    display: none;
+  }
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  height: 4rem;
+}
